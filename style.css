@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+:root {
+    --white-clr: rgba(255, 255, 255);
+    --black-clr: rgba(0, 0, 0);
+    --montserrat-500-600-700: 'Montserrat', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+.user,
+.stats { display: flex; }
+
+body,
+.user {  flex-direction: column; }
+
+.details,
+.stats,
+.attribution { text-align: center; }
+
+.name,
+.post h4,
+.follower h4,
+.following h4 { font-weight: 600; }
+
+body { font-family: var(--montserrat-500-600-700); }
+
+.user { align-items: center; }
+
+.image img {
+    height: auto;
+    width: 100%;
+    display: block;
+}
+
+.details { line-height: 1.5; }
+
+.region { color: #A9A9A9; }
+
+.stats { justify-content: center; }
+
+.post,
+.follower,
+.following { background-color: #E5E5E5; }
+
+.post p,
+.follower p,
+.following p { color: #BDBDBD; }
+
+.grid-image {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    'photo-1 photo-2 photo-2'
+    'photo-3 photo-3 photo-4'
+    'photo-5 photo-6 photo-4';
+}
+
+.photo-1 { grid-area: photo-1; }
+.photo-2 { grid-area: photo-2; }
+.photo-3 { grid-area: photo-3; }
+.photo-4 { grid-area: photo-4; }
+.photo-5 { grid-area: photo-5; }
+.photo-6 { grid-area: photo-6; }
+
+.grid-image > img {
+    height: auto;
+    width: 100%;
+    display: block;
+}
+
+.attribution,
+.attribution a {
+    color: #BDBDBD;
+}
+
+.attribution > .username { font-weight: 700; }
+.attribution a { text-decoration: none; }
+
+@media (max-width: 768px) {
+    .user { padding: 8vw 0; gap: 2.5vw; }
+
+    .image { max-width: 20%; }
+    .image img { border-radius: 2.083vw; }
+
+    .name { font-size: 3.125vw; }
+    .region { font-size: 1.823vw; }
+
+    .stats { gap: 3.6vw; }
+
+    .post,
+    .follower,
+    .following { border-radius: 1.563vw; }
+
+    .post { padding: 2vw 4vw; }
+    .follower { padding: 2vw 2.6vw; }
+    .following { padding: 2vw; }
+
+    .post h4,
+    .follower h4,
+    .following h4 { font-size: 2.344vw; }
+
+    .post p,
+    .follower p,
+    .following p { font-size: 1.823vw;}
+
+    .grid-image {
+        gap: 3vw;
+        padding: 1.5vw 3vw;
+    }
+
+    .grid-image > img { border-radius: 1.563vw; box-shadow: 0 1.302vw 1.953vw 0.651vw rgb(0 56 49 / 14%); }
+
+    .attribution { padding: 8vw 0 3vw 0; font-size: 1.823vw; }
+}
+
+@media (min-width: 768.5px) {
+    .user { padding: 4vw 0; gap: 1.5vw; }
+
+    .image { max-width: 10%; }
+    .image img { border-radius: 1.042vw; }
+
+    .name { font-size: 1.563vw; }
+    .region { font-size: 0.911vw; }
+
+    .stats { gap: 1.8vw; }
+
+    .post,
+    .follower,
+    .following { border-radius: 0.781vw; }
+
+    .post { padding: 1vw 2vw; }
+    .follower { padding: 1vw 1.3vw; }
+    .following { padding: 1vw; }
+
+    .post h4,
+    .follower h4,
+    .following h4 { font-size: 1.172vw; }
+
+    .post p,
+    .follower p,
+    .following p { font-size: 0.911vw; }
+
+    .grid-image {
+        gap: 2.5vw;
+        padding: 1.5vw 10vw;
+    }
+
+    .grid-image > img { border-radius: 0.781vw; box-shadow: 0 0.651vw 0.977vw 0.326vw rgb(0 56 49 / 14%); }
+
+    .attribution { padding: 8vw 0 1.7vw 0; font-size: 0.911vw; }
+}
